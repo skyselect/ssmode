@@ -1,6 +1,6 @@
-from colors import colors
-from colors import ss_light
-from colors import ss_dark
+from .constants import colors
+from .constants import ss_light
+from .constants import ss_dark
 
 def style_bar_chart(ptl_fig, ytitle=''):
   # Add axis title and style the legend
