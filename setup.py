@@ -5,9 +5,9 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ssmode",
-    version="0.0.9",
-    author="skyselect",
-    author_email="rasmus@skyselect.com",
+    version="0.1.0",
+    author="SkySelect, Inc.",
+    author_email="oss@skyselect.com",
     description="Tools for use in Mode Analytics Jupyter Notebooks",
     long_description=long_description,
     long_description_content_type="text/markdown",
