@@ -9,11 +9,12 @@ def style_bar_chart(ptl_fig, ytitle=''):
   # Color the bars, need to modify color library with more colors
   i=0
   for bar in ptl_fig.data:
-    bar.marker = {"color": colors[i % len(colors)]}
-    bar.textposition='auto'
-    bar.textfont={"size": 11, "color": "#FFFFFF", "family": "Graphik, Arial, sans-serif"}
-    bar.hoverinfo='text'
-    i+=1
+    if bar.name != 'hide':
+      bar.marker = {"color": colors[i % len(colors)]}
+      bar.textposition='auto'
+      bar.textfont={"size": 11, "color": "#FFFFFF", "family": "Graphik, Arial, sans-serif"}
+      bar.hoverinfo='text'
+      i+=1
 
   # Format hovering
   ptl_fig.layout.hovermode = "x"

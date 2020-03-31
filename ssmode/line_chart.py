@@ -9,10 +9,11 @@ def style_line_chart(ptl_fig, ytitle=''):
   # Color the bars, need to modify color library with more colors
   i=0
   for line in ptl_fig.data:
-    line.marker = {"color": colors[i % len(colors)]}
-    line.textfont={"size": 11, "color": "#FFFFFF", "family": "Graphik, Arial, sans-serif"}
-    line.hoverinfo='text'
-    i+=1
+    if bar.name != 'hide':
+      line.marker = {"color": colors[i % len(colors)]}
+      line.textfont={"size": 11, "color": "#FFFFFF", "family": "Graphik, Arial, sans-serif"}
+      line.hoverinfo='text'
+      i+=1
 
   # Format hovering
   ptl_fig.layout.hovermode = "x"
