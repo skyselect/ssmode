@@ -1,6 +1,6 @@
 from .constants import colors
 
-def style_bar_chart(ptl_fig, ytitle=''):
+def style_line_chart(ptl_fig, ytitle=''):
   # Add axis title and style the legend
   ptl_fig.layout.yaxis = {"title": ytitle, "titlefont": {"size": 12}}
   ptl_fig.layout.legend = {"xanchor":"center", "yanchor":"top", "x":0.5,"y":-0.15, "orientation":"h"}
@@ -8,11 +8,10 @@ def style_bar_chart(ptl_fig, ytitle=''):
 
   # Color the bars, need to modify color library with more colors
   i=0
-  for bar in ptl_fig.data:
-    bar.marker = {"color": colors[i % len(colors)]}
-    bar.textposition='auto'
-    bar.textfont={"size": 11, "color": "#FFFFFF", "family": "Graphik, Arial, sans-serif"}
-    bar.hoverinfo='text'
+  for line in ptl_fig.data:
+    line.marker = {"color": colors[i % len(colors)]}
+    line.textfont={"size": 11, "color": "#FFFFFF", "family": "Graphik, Arial, sans-serif"}
+    line.hoverinfo='text'
     i+=1
 
   # Format hovering
